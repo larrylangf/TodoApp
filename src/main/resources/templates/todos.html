@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>TodoApp</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+ <div class="container">
+	<div class="alert alert-info">
+	 <h2 th:inline="text">Welcome [[${#httpServletRequest.remoteUser}]]!</h2>
+	</div>
+	<a th:href="@{/login}" class="btn btn-primary" th:text="Login"></a>
+	<form th:action="@{/logout}" method="post">
+		<input type="submit" value="Logout" class="btn btn-dark"/>
+	</form>
+	<h2>TodoApp provides tool to create todo's for tasks faced on work or free time!</h2>
+	<table class="table table-dark">
+	  <thead class="thead-light">
+		 <tr>
+		  <th>Todo list</th>	
+		 </tr>
+	  </thead>
+	  <tbody>
+	   <tr th:each="task : ${tasks}">
+	    <td th:text="${task.description}"></td>
+	    <td><a th:href="@{/del/{description}(description=${task.description})}" class="btn btn-danger">Delete</a></td>
+	   </tr>
+	  </tbody>
+	</table> 
+	 <a th:href="@{/add}" class="btn btn-warning">Add task</a>
+	</div>
+</body>
+</html>

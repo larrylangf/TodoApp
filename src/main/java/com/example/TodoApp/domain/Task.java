@@ -1,11 +1,11 @@
-package com.example.TodoApp.model;
+package com.example.TodoApp.domain;
 
 import org.springframework.data.annotation.Id;
 
 public class Task {
 	
 	@Id
-	public long id;
+	public String id;
 	
 	public String title;
 	
@@ -14,10 +14,10 @@ public class Task {
 	public Task(String title) {
 		this.title = title;
 	}
-	public long getId() {
+	public String getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	 
