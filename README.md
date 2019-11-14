@@ -1,11 +1,16 @@
-# Java spring boot sovellus yksilöprojektina palvelinohjelmointi kurssilla
+# Java spring boot sovellus 
 
-### Sovellus kuvaus:
 
-** Todo aplikaatio Thymeleaf sivuilla luodulla käyttoliittymällä ja CRUD ominaisuuksilla. ** 
+## Toteutettu yksilötyönä palvelinohjelmointi kurssilla
 
-** Tiedot tallennetaan MongoDB NO SQL-tietokantaan. **
 
- ** TaskController moduliin on tehty rest api toiminnallisuudet tehtävien listaamiseen, etsi tehtävä id:n perusteella, poista id:n perusteella, sekä listaa käyttäjät. ** 
+## Sovellus kuvaus:
+
+**Lokaali Todo aplikaatio Thymeleaf sivuilla luodulla käyttoliittymällä ja CRUD ominaisuuksilla.** 
+
+**Tiedot tallennetaan MongoDB NO SQL-tietokantaan.**
+
+ **TaskController moduliin on tehty palvelinohjelman lisäksi rest api toiminnallisuudet tehtävien listaamiseen, etsi tehtävä id:n perusteella, poista id:n perusteella, sekä listaa käyttäjät.** 
  
- ** Tekijä: Lauri Leinonen **
+ 
+ **Tekijä: Lauri Leinonen**
